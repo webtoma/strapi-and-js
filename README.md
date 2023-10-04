@@ -16,7 +16,7 @@ Installer et configurer la documentation API Swagger UI pour votre projet Strapi
 
 ### Étapes
 1. **Installation de Swagger**
-   - Suivez [ce guide](https://strapi.io/blog/strapi-swagger) pour installer et configurer Swagger dans votre projet Strapi.
+   - Suivez [ce guide](https://docs.strapi.io/dev-docs/plugins/documentation) pour installer et configurer Swagger dans votre projet Strapi.
    - Assurez-vous que la documentation est accessible à [http://localhost:1337/documentation](http://localhost:1337/documentation).
 
 ## Partie 2 : Configuration de l'API pour Ajout Public
@@ -43,20 +43,23 @@ Postman est un outil qui permet de tester des requêtes HTTP. Vous pouvez créer
 
 ### Étapes Détaillées
 1. **Configuration de Postman**
-   - Ouvrez Postman et créez un nouveau "Request" en cliquant sur le bouton "New" puis "Request".
+   - Ouvrez Postman et créez un nouveau "Workspace" en cliquant sur le bouton "New" puis "HTTP".
    - Donnez un nom à votre requête et cliquez sur "Save to My Workspace".
 
 2. **Ajouter un Article**
    - Sélectionnez "POST" comme méthode de requête dans le menu déroulant.
-   - Entrez l'URL de votre API pour ajouter un article : `http://localhost:1337/articles`.
+   - Entrez l'URL de votre API pour ajouter un article : `http://localhost:1337/api/articles`.
    - Allez dans l'onglet "Body".
    - Sélectionnez "raw" et "JSON (application/json)".
    - Ajoutez les données de l'article à envoyer en JSON, par exemple :
      ```json
-     {
-       "title": "My New Article",
-       "content": "This is the content of the new article."
-     }
+    {
+      "data" :
+      {
+         "title": "My New Article",
+         "content": "This is the content of the new article."
+      }
+    }
      ```
    - Cliquez sur "Send".
    - Vous devriez voir un retour de l'API dans la partie inférieure de la fenêtre avec les détails de l'article créé.
